@@ -1,11 +1,21 @@
 import requests
 from bs4 import BeautifulSoup
-response = requests.get("https://bulbapedia.bulbagarden.net/wiki/Wartortle_(Pok%C3%A9mon)")
+response = requests.get("https://www.caltex.co.nz/find-a-station/")
 page = BeautifulSoup(response.content,"html.parser")
-title = page.find("title")
-print(title)
 
-movesResponse = requests.get("https://bulbapedia.bulbagarden.net/wiki/Wartortle_(Pok%C3%A9mon)#Learnset")
-movesInfo = BeautifulSoup(response.content,"html.parser")
-learnset = movesInfo.find_all(text=True)
-print(learnset)
+stationHeadings = []
+
+for element in page.find_all(class_="locator-result__heading"):
+  print(element.text)
+  stationHeadings.append(element.text)
+
+for x in stationHeadings:
+  print(x)
+
+#display status code of html request
+
+print("response status code:" + str(response.status_code))
+
+
+
+
