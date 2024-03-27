@@ -1,4 +1,11 @@
+#Vera! your local install paths for chrome & chromedriver are:
+~/chrome/linux-123.0.6312.86/chrome-linux64/chrome
+~/chromedriver/linux-125.0.6381.0/chromedriver-linux64
+
+#Fix your chrome version mismatch bitch! Get webdriver for 123.
+
 install pipenv
+
 #install associated dependencies:
 
 python -m pipenv install
