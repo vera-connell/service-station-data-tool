@@ -1,8 +1,10 @@
 #Vera! your local install paths for chrome & chromedriver are:
 ~/chrome/linux-123.0.6312.86/chrome-linux64/chrome
-~/chromedriver/linux-125.0.6381.0/chromedriver-linux64
+~/chromedriver/linux-123.0.6312.86/chromedriver-linux64
 
-#Fix your chrome version mismatch bitch! Get webdriver for 123.
+123.0.6312.86 is the appropriate chromedriver version for compatability on the latest stable chrome for testing.
+
+#TODO: make the filepaths environment variables so the project is more redistributable. Or set up puppeteer in a build script to handle this!
 
 install pipenv
 

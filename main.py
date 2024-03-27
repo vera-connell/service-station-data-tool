@@ -16,7 +16,7 @@ chrome_options.add_argument("--no-sandbox")
 
 homedir = os.path.expanduser("~")
 chrome_options.binary_location = f"{homedir}/chrome/linux-123.0.6312.86/chrome-linux64/chrome"
-webdriver_service = Service(f"{homedir}/chromedriver/linux-125.0.6381.0/chromedriver-linux64/chromedriver")
+webdriver_service = Service(f"{homedir}/chromedriver/linux-123.0.6312.86/chromedriver-linux64/chromedriver")
 
 #Select browser
 
@@ -24,7 +24,7 @@ browser = webdriver.Chrome(service=webdriver_service, options=chrome_options)
 
 #Request a page & print the description
 
-browser.get("https://www.caltex.co.nz/find-a-station/")
+browser.get("https://cloudbytes.dev")
 description = browser.find_element(By.NAME, "description").get_attribute("content")
 print(f"{description}")
 
